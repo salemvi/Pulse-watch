@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/font.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>RunSmart</title>
 </head>
 <body>
-    <div class="promo">
+    <section class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -48,9 +50,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages">
         <div class="container">
             <div class="title">Наши преимущества</div>
             <div class="advantages__wrapper">
@@ -82,8 +84,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="consultation">
+    </section>
+    <section class="consultation">
         <div class="container">
             <h2 class="title title_left">Получите бесплатную консультацию<br>
                 по подбору пульсометра </h2>
@@ -96,9 +98,26 @@
                         
                         <button class="button button_submit">заказать консультацию</button>
                     </form>
-        </div>
+        </section>
     </div>
-    
-
+    <section class="carousel">
+       <div class="container">
+        <div class="carousel__inner">
+            <div>
+                <img src="img/watches.png" alt="watch1">
+            </div>
+            <div>
+                <img src="img/watch_2.png" alt="watch2">
+            </div>
+            <div>
+                <img src="img/watch_3.png" alt="watch3">
+            </div>
+        </div>
+        <button type="button" class="prev"><img src="icons/left.svg"></img></button>
+        <button type="button" class="next"><img src="icons/right.svg"></img></button>
+       </div>
+    </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
