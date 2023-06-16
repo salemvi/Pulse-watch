@@ -41,7 +41,7 @@
     &__content{
         margin-top: 60px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         display: none;
         &_active{
@@ -116,7 +116,7 @@
         &__content{
             width: 50%;
             transform: translateX(100%);
-            transition: 0.5 all;
+            transition: 0.5s all;
 
             &_active{
                 transform: translateX(0%);
@@ -141,7 +141,7 @@
             li{
                 position: relative;
                 color: #555555;
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: 300;
                 text-align: left;
                 margin-bottom: 25px;
