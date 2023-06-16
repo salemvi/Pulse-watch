@@ -188,6 +188,28 @@
             align-items: center;      
         }        
     }
+    .reviews{
+        &__item{
+            display: block;
+            
+            
+        }
+        &__img{
+            display: block;
+            margin: auto;
+        }
+        &__subtitle{
+            padding-top: 10px;
+            text-align: center;
+        }
+        &__count, &__descr{
+            font-size: 12px;
+        }
+        
+        
+
+        
+    }
 }
 @media (max-width: 575px){
     .promo{
@@ -287,7 +309,6 @@
                 font-size: 11px;
                 }
             }
-            
             hr{
                 width: 215px;
             }
