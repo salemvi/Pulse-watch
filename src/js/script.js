@@ -46,7 +46,7 @@ const slider = tns({
       toggleSlide('.catalog-item__link');
       toggleSlide('.catalog-item__back');
 
-    //Modal
+        //Modal
       $('[data-model=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
       });
@@ -61,17 +61,17 @@ const slider = tns({
           $('.overlay, #order').fadeIn('slow');
         })
       });
-   });
-})(jQuery);
-
+      
+    });
+  })(jQuery);
 
 
 
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
-console.log(overlay);
+// console.log(overlay);
 overlay.onclick = function (e) {
-  console.log(e);
+  // console.log(e);
 
   if (e.target === overlay) {
     closeModal();
@@ -79,5 +79,5 @@ overlay.onclick = function (e) {
   }
 };
 function closeModal() {
-  modal.style.display = 'none';
+  overlay.style.display = "none";
 }
