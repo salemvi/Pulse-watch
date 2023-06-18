@@ -61,7 +61,57 @@ const slider = tns({
           $('.overlay, #order').fadeIn('slow');
         })
       });
+
+      function validateForms(form){
+        $(form).validate({
+          rules: {
+            name: "required",
+            phone: "required",
+            email: {
+              required: true,
+              email: true
+            }
+            },
+            messages: {
+              name: "Пожалуйста, введите свое имя",
+              phone: "Пожалуйста введите номер в формате '+7'",
+              email: {
+                required: "Укажите свой email адрес, чтобы мы связались с вами",
+                email: "Введите email в формате name@domain.com/ru"
+              }
+            }
+          });
+      };
+      validateForms('#consultation form');
+      validateForms('#order form');
+      validateForms('#consultation-form');
       
+      $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+
+      $('form').submit(function(e){
+        e.preventDefault();
+
+        if(!$(this).valid()){
+          return;
+        }
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function(){
+          $(this).find("input").val("");
+          $('#consultation, #order').fadeOut();
+          $('.overlay, #thanks').fadeIn('slow');
+
+          $('form').trigger('reset');
+
+        });
+        return false;
+
+      });
+
+
     });
   })(jQuery);
 
@@ -81,3 +131,4 @@ overlay.onclick = function (e) {
 function closeModal() {
   overlay.style.display = "none";
 }
+
